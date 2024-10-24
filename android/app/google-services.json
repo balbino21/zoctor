@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "368339589147",
+    "project_id": "zoctor-c5390",
+    "storage_bucket": "zoctor-c5390.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:368339589147:android:264e26ce1806c774d380be",
+        "android_client_info": {
+          "package_name": "com.example.zoctor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw4XuG9qLwZ8NtL4AdAla2x8hJUWaDYlg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

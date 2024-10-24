@@ -1,0 +1,9 @@
+flutter_native_splash:
+  color: "#E0F2F1"  # Light teal color to match the gradient start
+  image: assets/images/health.png
+  android_12:
+    image: assets/images/health.png
+    color: "#E0F2F1"  # Match the solid color to the gradient's start color
+  ios: true
+  android: true
+  web: true
