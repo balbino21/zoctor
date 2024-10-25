@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:zoctor/pages/register_page.dart';
 import '../../../core/app_pallete.dart';
 
@@ -13,10 +14,7 @@ class LoginRegisterText extends StatelessWidget {
         const Text("Don't have an account?"),
         GestureDetector(
           onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => RegisterPage()),
-            );
+            Get.to(RegisterPage());
           },
           child: const Text(
             " Register now",

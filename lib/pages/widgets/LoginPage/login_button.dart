@@ -16,10 +16,6 @@ class LoginButton extends StatelessWidget {
       width: double.infinity,
       child: ElevatedButton(
         onPressed: onPressed,
-        child: const Text(
-          'LOGIN',
-          style: TextStyle(color: AppPallete.white),
-        ),
         style: ElevatedButton.styleFrom(
           backgroundColor: AppPallete.black,
           shape: RoundedRectangleBorder(
@@ -27,6 +23,10 @@ class LoginButton extends StatelessWidget {
             side: const BorderSide(color: AppPallete.tealAccent, width: 4),
           ),
           padding: const EdgeInsets.symmetric(vertical: 20),
+        ),
+        child: const Text(
+          'LOGIN',
+          style: TextStyle(color: AppPallete.white),
         ),
       ),
     );

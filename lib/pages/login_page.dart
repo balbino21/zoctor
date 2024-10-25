@@ -1,5 +1,8 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:get/get.dart';
 import 'package:zoctor/services/auth.dart';
 import 'package:zoctor/pages/home_page.dart';
 import 'widgets/LoginPage/email_password_fields.dart';
@@ -35,13 +38,10 @@ class _LoginPageState extends State<LoginPage> {
       );
 
       if (userCredential.user != null) {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => HomePage()),
-        );
+        Get.off(const HomePage());
+
       }
     } on FirebaseAuthException catch (e) {
-      print("Login Error: ${e.message}");
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text("Login failed: ${e.message}")),
       );
@@ -60,13 +60,10 @@ class _LoginPageState extends State<LoginPage> {
     try {
       User? user = await _authServices.signInGoogle();
       if (user != null) {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => HomePage()),
-        );
+        Get.off(const HomePage());
+
       }
     } catch (e) {
-      print("Google Sign-In Error: $e");
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text("Google Sign-In failed: $e")),
       );
@@ -82,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: Center(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.all(24.0),
+          padding: const EdgeInsets.all(24),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

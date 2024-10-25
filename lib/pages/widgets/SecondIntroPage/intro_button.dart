@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:zoctor/core/app_pallete.dart';
 import 'package:zoctor/pages/login_page.dart';
 
@@ -9,10 +10,7 @@ class IntroButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const LoginPage()),
-        );
+        Get.to(const LoginPage());
       },
       style: ElevatedButton.styleFrom(
         foregroundColor: AppPallete.tealAccent,

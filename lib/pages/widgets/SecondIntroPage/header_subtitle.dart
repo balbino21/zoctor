@@ -7,7 +7,7 @@ class HeaderSubtitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.all(8.0),
+      padding: EdgeInsets.all(8),
       child: Text(
         'IMPROVE YOUR LIFESTYLE',
         style: TextStyle(

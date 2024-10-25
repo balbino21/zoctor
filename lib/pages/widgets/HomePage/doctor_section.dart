@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 
 class DoctorSection extends StatelessWidget {
-  const DoctorSection({super.key});
+  final String name;
+  final String profession;
+  final String image;
+
+  const DoctorSection({
+    super.key,
+    required this.name,
+    required this.profession,
+    required this.image,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,15 +25,14 @@ class DoctorSection extends StatelessWidget {
                 'Doctors',
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
-              
             ],
           ),
         ),
-        const SizedBox(height: 10.0),
+        const SizedBox(height: 10),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Container(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
               color: Colors.grey[200],
               borderRadius: BorderRadius.circular(10.0),
@@ -35,9 +43,9 @@ class DoctorSection extends StatelessWidget {
                   height: 150,
                   padding: const EdgeInsets.only(top: 30, bottom: 30),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(8.0),
+                    borderRadius: BorderRadius.circular(8),
                     child: Image.asset(
-                      'assets/images/alexa.png',
+                      image,
                       width: 70,
                       height: 70,
                       fit: BoxFit.cover,
@@ -45,20 +53,20 @@ class DoctorSection extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 20),
-                const Column(
+                Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      'Heart Specialist',
-                      style: TextStyle(
+                      profession,//why this error
+                      style: const TextStyle(
                         color: Colors.red,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 5.0),
+                    const SizedBox(height: 5.0),
                     Text(
-                      'Dr. Alexa Sharma',
-                      style: TextStyle(fontSize: 18),
+                      name,
+                      style: const TextStyle(fontSize: 18),
                     ),
                   ],
                 ),

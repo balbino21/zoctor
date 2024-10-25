@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zoctor/core/app_pallete.dart';
 import 'package:zoctor/pages/login_page.dart';
 import 'package:zoctor/pages/second_intro_page.dart';
+import 'package:get/get.dart';
 
 class FirstIntroButtons extends StatelessWidget {
   const FirstIntroButtons({super.key});
@@ -13,12 +14,7 @@ class FirstIntroButtons extends StatelessWidget {
       children: [
         TextButton(
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const LoginPage(),
-              ),
-            );
+            Get.to(const LoginPage());
           },
           child: const Text(
             'Skip',
@@ -27,12 +23,7 @@ class FirstIntroButtons extends StatelessWidget {
         ),
         ElevatedButton(
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const SecondIntroPage(),
-              ),
-            );
+            Get.to(const SecondIntroPage());
           },
           style: ElevatedButton.styleFrom(
             foregroundColor: AppPallete.tealAccent,
