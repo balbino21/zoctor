@@ -7,5 +7,6 @@ class AppPallete{
   static const tealAccent=Colors.tealAccent;
   static const teal=Colors.teal;
   static const grey=Colors.grey;
+  static const green=Colors.green;
 
 }
